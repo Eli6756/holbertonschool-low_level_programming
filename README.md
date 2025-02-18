@@ -1,2 +1,1 @@
-# holbertonschool-low_level_programming
-Start on the basics of C
+Low level Programming, C basics
