@@ -4,7 +4,10 @@
 
 /**
  * main - Entry point
- * Description: Prints the last digit of a random number and evaluates its value
+ * 
+ * Description: Prints the last digit of a random number
+ *              and evaluates its value.
+ * 
  * Return: Always 0 (Success)
  */
 int main(void)
