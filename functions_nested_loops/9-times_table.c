@@ -14,6 +14,7 @@ for (row = 0; row <= 9; row++)
 for (col = 0; col <= 9; col++)
 {
 prod = row * col;
+
 if (col != 0)
 {
 _putchar(',');
@@ -21,7 +22,10 @@ _putchar(' ');
 if (prod < 10)
 _putchar(' ');
 }
-_putchar(prod / 10 ? (prod / 10) + '0' : ' ');
+
+if (prod >= 10)
+_putchar((prod / 10) + '0');
+            
 _putchar((prod % 10) + '0');
 }
 _putchar('\n');
