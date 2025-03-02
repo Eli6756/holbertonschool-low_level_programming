@@ -7,12 +7,12 @@
  */
 void puts2(char *str)
 {
-int i = 0;
+int i;
 
-while (str[i] != '\0') /* Loop through the string */
+for (i = 0; str[i] != '\0'; i++)
 {
-_putchar(str[i]); /* Print the character */
-i += 2; /* Move to the next alternate character */
+if (i % 2 == 0) /* Print every even index character */
+_putchar(str[i]);
 }
 
 _putchar('\n'); /* Print newline at the end */
