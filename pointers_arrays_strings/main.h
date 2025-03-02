@@ -1,7 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-char *_strncat(char *dest, char *src, int n);
-void swap_int(int *a, int *b);
+char *_strncpy(char *dest, char *src, int n);
 
 #endif /* MAIN_H */
