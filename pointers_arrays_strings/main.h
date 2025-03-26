@@ -1,6 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-unsigned int _strspn(char *dest, char *accept);
+char *_strpbrk(char *s, char *accept);
 
 #endif
