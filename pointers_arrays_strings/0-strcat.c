@@ -9,18 +9,19 @@
  */
 char *_strcat(char *dest, char *src)
 {
-char *ptr = dest;
+int i = 0;
+int j = 0;
 
-/* Move ptr to the end of dest */
-while (*ptr)
-ptr++;
+while (dest[i] != '\0')
+i++;
 
-/* Copy src to dest */
-while (*src)
-*ptr++ = *src++;
+while (src[j] != '\0')
+{
+dest[i] = src[j];
+i++;
+j++;
+}
+dest[i] = '\0';
 
-/* Add null terminator */
-*ptr = '\0';
-
-return dest;
+return (dest);
 }
