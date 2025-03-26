@@ -1,6 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-char *_strcat(char *dest, char *src);
+unsigned int _strspn(char *dest, char *accept);
 
 #endif
