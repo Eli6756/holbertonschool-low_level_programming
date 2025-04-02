@@ -3,12 +3,12 @@
 #include "dog.h"
 
 /**
- * new_dog - creates a new dog with copied name and owner
- * @name: name of the dog
- * @age: age of the dog
- * @owner: owner of the dog
+ * new_dog - creates a new dog with copies of name and owner
+ * @name: dog's name
+ * @age: dog's age
+ * @owner: owner's name
  *
- * Return: pointer to new dog_t, or NULL on failure
+ * Return: pointer to new dog_t struct, or NULL on failure
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
