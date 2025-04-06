@@ -3,47 +3,39 @@
 #include "variadic_functions.h"
 
 /**
- * print_all - prints any type of argument passed
- * @format: list of types of arguments passed
+ * print_all - prints anything based on a format string
+ * @format: list of types of arguments
  */
 void print_all(const char * const format, ...)
 {
 va_list args;
 unsigned int i = 0;
-char *str, *sep = "";
+char *sep = "", *str;
 
 va_start(args, format);
 
 while (format && format[i])
 {
-if (format[i] == 'c')
+switch (format[i])
 {
+case 'c':
 printf("%s%c", sep, va_arg(args, int));
-}
-else if (format[i] == 'i')
-{
+break;
+case 'i':
 printf("%s%d", sep, va_arg(args, int));
-}
-else if (format[i] == 'f')
-{
+break;
+case 'f':
 printf("%s%f", sep, va_arg(args, double));
-}
-else if (format[i] == 's')
-{
+break;
+case 's':
 str = va_arg(args, char *);
-if (str == NULL)
-str = "(nil)";
-printf("%s%s", sep, str);
+printf("%s%s", sep, str ? str : "(nil)");
+break;
 }
-else
-{
-i++;
-continue;
-}
-sep = ", ";
+sep = (format[i] == 'c' || format[i] == 'i' ||
+format[i] == 'f' || format[i] == 's') ? ", " : sep;
 i++;
 }
-
 va_end(args);
 printf("\n");
 }
