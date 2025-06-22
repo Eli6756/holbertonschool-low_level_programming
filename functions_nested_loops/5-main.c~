@@ -1,0 +1,9 @@
+if (r < 0)
+{
+_putchar('-');
+_putchar('1');
+}
+else
+{
+_putchar(r + '0');
+}
