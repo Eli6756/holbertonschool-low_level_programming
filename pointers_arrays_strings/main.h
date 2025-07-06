@@ -2,6 +2,7 @@
 #define MAIN_H
 
 int _putchar(char c);
+void print_array(int *a, int n);
 void puts_half(char *str);
 void print_rev(char *s);
 void _puts(char *str);
