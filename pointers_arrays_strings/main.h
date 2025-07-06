@@ -8,6 +8,6 @@ void rev_string(char *s);
 int _strlen(char *s);
 void swap_int(int *a, int *b);
 void reset_to_98(int *n);
-/* other prototypes... */
+void puts2(char *str);
 
 #endif /* MAIN_H */
