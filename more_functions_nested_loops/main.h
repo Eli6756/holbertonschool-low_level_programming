@@ -13,5 +13,6 @@ void print_triangle(int size);
 int _isupper(int c);
 int _isdigit(int c);
 int mul(int a, int b);
+char *infinite_add(char *n1, char *n2, char *r, int size_r);
 
 #endif /* MAIN_H */
