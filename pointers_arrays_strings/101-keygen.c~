@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+/**
+ * main - generates a valid password for 101-crackme
+ *
+ * Return: 0
+ */
+int main(void)
+{
+int sum = 0;
+int rand_char;
+
+srand(time(NULL));
+
+while (sum < 2772)
+{
+rand_char = rand() % 94 + 33;  /* printable ASCII range: 33 to 126 */
+if (sum + rand_char > 2772)
+break;
+printf("%c", rand_char);
+sum += rand_char;
+}
+
+/* Print the final character to bring the total to 2772 */
+printf("%c", 2772 - sum);
+
+return (0);
+}
