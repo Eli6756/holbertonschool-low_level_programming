@@ -1,0 +1,38 @@
+#include "main.h"
+
+/**
+ * print_to_98 - prints all integers from n to 98, followed by a new line
+ * @n: the starting number
+ */
+void print_to_98(int n)
+{
+if (n == 98)
+{
+print_number(n);
+_putchar('\n');
+return;
+}
+
+if (n < 98)
+{
+while (n <= 98)
+{
+print_number(n);
+if (n != 98)
+_putchar(',');
+_putchar(' ');
+n++;
+}
+}
+else
+{
+while (n >= 98)
+{
+print_number(n);
+if (n != 98)
+_putchar(',');
+_putchar(' ');
+n--;
+}
+}
+}
