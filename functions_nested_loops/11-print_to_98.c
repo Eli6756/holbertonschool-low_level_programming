@@ -30,33 +30,28 @@ _putchar((num % 10) + '0');
  */
 void print_to_98(int n)
 {
-if (n == 98)
+if (n <= 98)
+{
+while (n < 98)
 {
 print_number(n);
-_putchar('\n');
-return;
-}
-
-if (n < 98)
-{
-while (n <= 98)
-{
-print_number(n);
-if (n != 98)
 _putchar(',');
 _putchar(' ');
 n++;
 }
+print_number(98);
+_putchar('\n');
 }
 else
 {
-while (n >= 98)
+while (n > 98)
 {
 print_number(n);
-if (n != 98)
 _putchar(',');
 _putchar(' ');
 n--;
 }
+print_number(98);
+_putchar('\n');
 }
 }
